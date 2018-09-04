@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.controller.dialogs');
 
@@ -34,7 +37,7 @@
   };
 
   ns.CheatsheetController.prototype.onRestoreDefaultsClick_ = function () {
-    if (window.confirm('Replace all custom shortcuts by the default Piskel shortcuts ?')) {
+    if (window.confirm(I18n.translate('Replace all custom shortcuts by the default Piskel shortcuts ?'))) {
       pskl.app.shortcutService.restoreDefaultShortcuts();
     }
   };
@@ -137,7 +140,7 @@
       shortcutClasses.push('cheatsheet-shortcut-editable');
     }
 
-    var title = shortcut.isEditable() ? 'Click to edit the key' : 'Shortcut cannot be remapped';
+    var title = shortcut.isEditable() ? I18n.translate('Click to edit the key') : I18n.translate('Shortcut cannot be remapped');
 
     var markup = pskl.utils.Template.replace(shortcutTemplate, {
       id : shortcut.getId(),
@@ -170,10 +173,10 @@
 
   ns.CheatsheetController.prototype.getHelptextTitle_ = function () {
     var helpItems = [
-      'Click on a shortcut to change the key.',
-      'When the shortcut blinks, press the key on your keyboard to assign it.',
-      'White shortcuts can not be edited.',
-      'Click on \'Restore default shortcuts\' to erase all custom shortcuts.'
+      I18n.translate('Click on a shortcut to change the key.'),
+      I18n.translate('When the shortcut blinks, press the key on your keyboard to assign it.'),
+      I18n.translate('White shortcuts can not be edited.'),
+      I18n.translate('Click on \'Restore default shortcuts\' to erase all custom shortcuts.')
     ];
 
     var helptextTitle = helpItems.reduce(function (p, n) {

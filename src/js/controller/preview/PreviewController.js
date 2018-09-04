@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.controller.preview');
 
@@ -25,17 +28,17 @@
       original: {
         button: document.querySelector('.original-size-button'),
         shortcut: pskl.service.keyboard.Shortcuts.MISC.X1_PREVIEW,
-        tooltip: 'Original size preview'
+        tooltip: I18n.translate('Original size preview')
       },
       best: {
         button: document.querySelector('.best-size-button'),
         shortcut: pskl.service.keyboard.Shortcuts.MISC.BEST_PREVIEW,
-        tooltip: 'Best size preview'
+        tooltip: I18n.translate('Best size preview')
       },
       full: {
         button: document.querySelector('.full-size-button'),
         shortcut: pskl.service.keyboard.Shortcuts.MISC.FULL_PREVIEW,
-        tooltip: 'Full size preview'
+        tooltip: I18n.translate('Full size preview')
       }
     };
     this.toggleOnionSkinButton = document.querySelector('.preview-toggle-onion-skin');
@@ -58,7 +61,7 @@
     var registerShortcut = pskl.app.shortcutService.registerShortcut.bind(pskl.app.shortcutService);
     registerShortcut(this.onionSkinShortcut, this.toggleOnionSkin_.bind(this));
 
-    var onionSkinTooltip = pskl.utils.TooltipFormatter.format('Toggle onion skin', this.onionSkinShortcut);
+    var onionSkinTooltip = pskl.utils.TooltipFormatter.format(I18n.translate('Toggle onion skin'), this.onionSkinShortcut);
     this.toggleOnionSkinButton.setAttribute('title', onionSkinTooltip);
 
     for (var size in this.previewSizes) {
@@ -97,13 +100,13 @@
 
     var validSizes;
     if (fullZoom < 1) {
-      this.disablePreviewSizeWidget_('No other option available');
+      this.disablePreviewSizeWidget_(I18n.translate('No other option available'));
       validSizes = ['full'];
     } else if (fullZoom === 1) {
-      this.disablePreviewSizeWidget_('No other option available');
+      this.disablePreviewSizeWidget_(I18n.translate('No other option available'));
       validSizes = ['original'];
     } else if (seamlessModeEnabled) {
-      this.disablePreviewSizeWidget_('Disabled in tile mode');
+      this.disablePreviewSizeWidget_(I18n.translate('Disabled in tile mode'));
       validSizes = ['original'];
     } else {
       this.enablePreviewSizeWidget_();

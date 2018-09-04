@@ -1,13 +1,16 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.tools.transform');
 
   ns.Flip = function () {
     this.toolId = 'tool-flip';
-    this.helpText = 'Flip vertically';
+    this.helpText = I18n.translate('Flip vertically');
     this.tooltipDescriptors = [
-      {key : 'alt', description : 'Flip horizontally'},
-      {key : 'ctrl', description : 'Apply to all layers'},
-      {key : 'shift', description : 'Apply to all frames'}
+      {key : 'alt', description : I18n.translate('Flip horizontally')},
+      {key : 'ctrl', description : I18n.translate('Apply to all layers')},
+      {key : 'shift', description : I18n.translate('Apply to all frames')}
     ];
   };
 

@@ -2,13 +2,14 @@
  * @provide pskl.tools.drawing.PaintBucket
  *
  * @require pskl.utils
+ * @require I18n
  */
 (function() {
   var ns = $.namespace('pskl.tools.drawing');
 
   ns.PaintBucket = function() {
     this.toolId = 'tool-paint-bucket';
-    this.helpText = 'Paint bucket tool';
+    this.helpText = I18n.translate('Paint bucket tool');
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.PAINT_BUCKET;
   };
 

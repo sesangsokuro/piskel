@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.controller.dialogs');
 
@@ -22,12 +25,12 @@
     var action = evt.target.getAttribute('data-action');
     var name = evt.target.getAttribute('data-name');
     if (action === 'load') {
-      if (window.confirm('This will erase your current piskel. Continue ?')) {
+      if (window.confirm(I18n.translate('This will erase your current piskel. Continue ?'))) {
         this.service_.load(name);
         this.closeDialog();
       }
     } else if (action === 'delete') {
-      if (window.confirm('This will permanently DELETE this piskel from your computer. Continue ?')) {
+      if (window.confirm(I18n.translate('This will permanently DELETE this piskel from your computer. Continue ?'))) {
         this.service_.remove(name);
         this.fillLocalPiskelsList_();
       }

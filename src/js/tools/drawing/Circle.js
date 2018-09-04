@@ -1,6 +1,6 @@
 /**
  * @provide pskl.tools.drawing.Circle
- *
+ * @require I18n
  * @require pskl.utils
  */
 (function() {
@@ -10,7 +10,7 @@
     ns.ShapeTool.call(this);
 
     this.toolId = 'tool-circle';
-    this.helpText = 'Circle tool';
+    this.helpText = I18n.translate('Circle tool');
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.CIRCLE;
   };
 

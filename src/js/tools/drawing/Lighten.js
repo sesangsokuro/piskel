@@ -2,6 +2,7 @@
  * @provide pskl.tools.drawing.Lighten
  *
  * @require Constants
+ * @require I18n
  * @require pskl.utils
  */
 (function() {
@@ -12,12 +13,12 @@
     this.superclass.constructor.call(this);
 
     this.toolId = 'tool-lighten';
-    this.helpText = 'Lighten';
+    this.helpText = I18n.translate('Lighten');
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.LIGHTEN;
 
     this.tooltipDescriptors = [
-      {key : 'ctrl', description : 'Darken'},
-      {key : 'shift', description : 'Apply only once per pixel'}
+      {key : 'ctrl', description : I18n.translate('Darken')},
+      {key : 'shift', description : I18n.translate('Apply only once per pixel')}
     ];
   };
 

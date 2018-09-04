@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.controller.dialogs.backups.steps');
 
@@ -84,7 +87,7 @@
       this.backupsController.backupsData.selectedSession = sessionId;
       this.backupsController.next();
     } else if (action == 'delete') {
-      if (window.confirm('Are you sure you want to delete this session?')) {
+      if (window.confirm( I18n.translate('Are you sure you want to delete this session?'))) {
         evt.target.closest('.session-item').classList.add('deleting');
         Q.all([
           pskl.app.backupService.deleteSession(sessionId),

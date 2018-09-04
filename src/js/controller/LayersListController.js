@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.controller');
 
@@ -45,28 +48,28 @@
   };
 
   ns.LayersListController.prototype.createButtonTooltips_ = function () {
-    var addTooltip = pskl.utils.TooltipFormatter.format('Create a layer', null, [
-      {key : 'shift', description : 'Clone current layer'}
+    var addTooltip = pskl.utils.TooltipFormatter.format(I18n.translate('Create a layer'), null, [
+      {key : 'shift', description : I18n.translate('Clone current layer')}
     ]);
     var addButton = this.rootEl.querySelector('[data-action="add"]');
     addButton.setAttribute('title', addTooltip);
 
     var moveDownTooltip = pskl.utils.TooltipFormatter.format('Move layer down', null, [
-      {key : 'shift', description : 'Move to the bottom'}
+      {key : 'shift', description : I18n.translate('Move to the bottom')}
     ]);
     var moveDownButton = this.rootEl.querySelector('[data-action="down"]');
     moveDownButton.setAttribute('title', moveDownTooltip);
 
-    var moveUpTooltip = pskl.utils.TooltipFormatter.format('Move layer up', null, [
-      {key : 'shift', description : 'Move to the top'}
+    var moveUpTooltip = pskl.utils.TooltipFormatter.format(I18n.translate('Move layer up'), null, [
+      {key : 'shift', description : I18n.translate('Move to the top')}
     ]);
     var moveUpButton = this.rootEl.querySelector('[data-action="up"]');
     moveUpButton.setAttribute('title', moveUpTooltip);
   };
 
   ns.LayersListController.prototype.initToggleLayerPreview_ = function () {
-    var descriptors = [{description : 'Opacity defined in PREFERENCES'}];
-    var helpText = 'Preview all layers';
+    var descriptors = [{description : I18n.translate('Opacity defined in PREFERENCES')}];
+    var helpText = I18n.translate('Preview all layers');
 
     pskl.app.shortcutService.registerShortcut(this.layerPreviewShortcut, this.toggleLayerPreview_.bind(this));
     var tooltip = pskl.utils.TooltipFormatter.format(helpText, this.layerPreviewShortcut, descriptors);
@@ -143,14 +146,14 @@
     } else if (el.classList.contains('layer-item-opacity')) {
       index = pskl.utils.Dom.getData(el, 'layerIndex');
       var layer = this.piskelController.getLayerAt(parseInt(index, 10));
-      var opacity = window.prompt('Set layer opacity (value between 0 and 1)', layer.getOpacity());
+      var opacity = window.prompt(I18n.translate('Set layer opacity (value between 0 and 1)'), layer.getOpacity());
       this.piskelController.setLayerOpacityAt(index, opacity);
     }
   };
 
   ns.LayersListController.prototype.renameCurrentLayer_ = function () {
     var layer = this.piskelController.getCurrentLayer();
-    var name = window.prompt('Please enter the layer name', layer.getName());
+    var name = window.prompt(I18n.translate('Please enter the layer name'), layer.getName());
     if (name) {
       var index = this.piskelController.getCurrentLayerIndex();
       this.piskelController.renameLayerAt(index, name);

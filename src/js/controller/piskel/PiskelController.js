@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.controller.piskel');
 
@@ -166,7 +169,7 @@
     if (this.hasFrameAt(index)) {
       this.currentFrameIndex = index;
     } else {
-      window.console.error('Could not set current frame index to ' + index);
+      window.console.error(I18n.translate('Could not set current frame index to ') + index);
     }
   };
 
@@ -188,7 +191,7 @@
     if (this.hasLayerAt(index)) {
       this.currentLayerIndex = index;
     } else {
-      window.console.error('Could not set current layer index to ' + index);
+      window.console.error(I18n.translate('Could not set current layer index to ') + index);
     }
   };
 
@@ -226,10 +229,10 @@
   };
 
   ns.PiskelController.prototype.generateLayerName_ = function () {
-    var name = 'Layer ' + this.layerIdCounter;
+    var name = I18n.translate('Layer') + ' ' + this.layerIdCounter;
     while (this.hasLayerForName_(name)) {
       this.layerIdCounter++;
-      name = 'Layer ' + this.layerIdCounter;
+      name = I18n.translate('Layer') + ' ' + this.layerIdCounter;
     }
     return name;
   };
@@ -255,7 +258,7 @@
       this.piskel.addLayerAt(layer, currentLayerIndex + 1);
       this.setCurrentLayerIndex(currentLayerIndex + 1);
     } else {
-      throw 'Layer name should be unique';
+      throw I18n.translate('Layer name should be unique');
     }
   };
 

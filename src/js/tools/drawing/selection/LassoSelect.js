@@ -2,6 +2,7 @@
  * @provide pskl.tools.drawing.selection.LassoSelect
  *
  * @require pskl.utils
+ * @require I18n
  */
 (function() {
   var ns = $.namespace('pskl.tools.drawing.selection');
@@ -10,7 +11,7 @@
     ns.AbstractDragSelect.call(this);
 
     this.toolId = 'tool-lasso-select';
-    this.helpText = 'Lasso selection';
+    this.helpText = I18n.translate('Lasso selection');
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.LASSO_SELECT;
   };
 

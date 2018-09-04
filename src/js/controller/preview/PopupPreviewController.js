@@ -1,7 +1,10 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.controller.preview');
 
-  var POPUP_TITLE = 'Piskel - preview';
+  var POPUP_TITLE = I18n.translate('Piskel - preview');
 
   ns.PopupPreviewController = function (piskelController) {
     this.piskelController = piskelController;

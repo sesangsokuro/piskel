@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.database');
 
@@ -35,7 +38,7 @@
       this.db = event.target.result;
       return this.db;
     }.bind(this)).catch(function (e) {
-      console.log('Could not initialize the piskel backup database');
+      console.log(I18n.translate('Could not initialize the piskel backup database'));
     });
   };
 

@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns  = $.namespace('pskl.controller');
 
@@ -34,7 +37,7 @@
         this.piskelName_.textContent = name;
       }
     } catch (e) {
-      console.warn('Could not update header : ' + e.message);
+      console.warn(I18n.translate('Could not update header : ') + e.message);
     }
   };
 

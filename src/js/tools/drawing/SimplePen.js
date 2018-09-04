@@ -2,13 +2,14 @@
  * @provide pskl.tools.drawing.SimplePen
  *
  * @require pskl.utils
+ * @require I18n
  */
 (function() {
   var ns = $.namespace('pskl.tools.drawing');
 
   ns.SimplePen = function() {
     this.toolId = 'tool-pen';
-    this.helpText = 'Pen tool';
+    this.helpText = I18n.translate('Pen tool');
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.PEN;
 
     this.previousCol = null;

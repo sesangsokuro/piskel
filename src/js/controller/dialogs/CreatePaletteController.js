@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.controller.dialogs');
 
@@ -91,7 +94,7 @@
   };
 
   ns.CreatePaletteController.prototype.deletePalette_ = function () {
-    if (window.confirm('Are you sure you want to delete palette ' + this.palette.name)) {
+    if (window.confirm(I18n.translate('Are you sure you want to delete palette ') + this.palette.name)) {
       this.paletteService.deletePaletteById(this.palette.id);
       pskl.UserSettings.set(pskl.UserSettings.SELECTED_PALETTE, Constants.CURRENT_COLORS_PALETTE_ID);
       this.closeDialog();
@@ -119,7 +122,7 @@
   };
 
   ns.CreatePaletteController.prototype.displayErrorMessage_ = function (message) {
-    message = 'Could not import palette : ' + message;
+    message = I18n.translate('Could not import palette : ') + message;
     $.publish(Events.SHOW_NOTIFICATION, [{
       'content' : message
     }]);

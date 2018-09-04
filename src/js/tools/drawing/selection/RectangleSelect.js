@@ -2,6 +2,7 @@
  * @provide pskl.tools.drawing.selection.RectangleSelect
  *
  * @require pskl.utils
+ * @require I18n
  */
 (function() {
   var ns = $.namespace('pskl.tools.drawing.selection');
@@ -10,7 +11,7 @@
     ns.AbstractDragSelect.call(this);
 
     this.toolId = 'tool-rectangle-select';
-    this.helpText = 'Rectangle selection';
+    this.helpText = I18n.translate('Rectangle selection');
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.RECTANGLE_SELECT;
 
   };

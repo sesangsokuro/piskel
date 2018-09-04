@@ -2,6 +2,7 @@
  * @provide pskl.tools.drawing.Rectangle
  *
  * @require pskl.utils
+ * @require I18n
  */
 (function() {
   var ns = $.namespace('pskl.tools.drawing');
@@ -10,7 +11,7 @@
     ns.ShapeTool.call(this);
 
     this.toolId = 'tool-rectangle';
-    this.helpText = 'Rectangle tool';
+    this.helpText = I18n.translate('Rectangle tool');
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.RECTANGLE;
   };
 

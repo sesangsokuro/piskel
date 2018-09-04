@@ -2,6 +2,7 @@
  * @provide pskl.tools.drawing.Eraser
  *
  * @require Constants
+ * @require I18n
  * @require pskl.utils
  */
 (function() {
@@ -11,7 +12,7 @@
     this.superclass.constructor.call(this);
 
     this.toolId = 'tool-eraser';
-    this.helpText = 'Eraser tool';
+    this.helpText = I18n.translate('Eraser tool');
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.ERASER;
   };
 

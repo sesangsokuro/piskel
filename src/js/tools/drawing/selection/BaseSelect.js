@@ -1,6 +1,7 @@
 /**
  * @provide pskl.tools.drawing.selection.BaseSelect
  *
+ * @requires I18n
  * @require pskl.utils
  */
 (function() {
@@ -20,10 +21,10 @@
     this.hasSelection = false;
 
     this.tooltipDescriptors = [
-      {description : 'Drag the selection to move it. You may switch to other layers and frames.'},
-      {key : 'ctrl+c', description : 'Copy the selected area'},
-      {key : 'ctrl+v', description : 'Paste the copied area'},
-      {key : 'shift', description : 'Hold to move the content'}
+      {description : I18n.translate('Drag the selection to move it. You may switch to other layers and frames.')},
+      {key : 'ctrl+c', description : I18n.translate('Copy the selected area')},
+      {key : 'ctrl+v', description : I18n.translate('Paste the copied area')},
+      {key : 'shift', description : I18n.translate('Hold to move the content')}
     ];
 
     $.subscribe(Events.SELECTION_DISMISSED, this.onSelectionDismissed_.bind(this));

@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.database.migrate');
 
@@ -25,9 +28,9 @@
     var migrateSprite = function (index) {
       var data = migrationData[index];
       if (!data) {
-        console.log('Data migration from local storage to indexed db finished.');
+        console.log(I18n.translate('Data migration from local storage to indexed db finished.'));
         if (success) {
-          console.log('Local storage piskels successfully migrated. Old copies will be deleted.');
+          console.log(I18n.translate('Local storage piskels successfully migrated. Old copies will be deleted.'));
           ns.MigrateLocalStorageToIndexedDb.deleteLocalStoragePiskels();
         }
 
@@ -39,7 +42,7 @@
           })
           .catch(function (e) {
             var success = false;
-            console.error('Failed to migrate local storage sprite for name: ' + data.name);
+            console.error(I18n.translate('Failed to migrate local storage sprite for name: ') + data.name);
             migrateSprite(index + 1);
           });
       }

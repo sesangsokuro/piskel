@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.controller.settings.exportimage');
 
@@ -134,7 +137,7 @@
       });
     }
 
-    $.publish(Events.SHOW_PROGRESS, [{'name': 'Building animated GIF ...'}]);
+    $.publish(Events.SHOW_PROGRESS, [{'name': I18n.translate('Building animated GIF ...')}]);
     gif.on('progress', function(percentage) {
       $.publish(Events.UPDATE_PROGRESS, [{'progress': (percentage * 100).toFixed(1)}]);
     }.bind(this));
@@ -151,7 +154,7 @@
     var transparentColor = pskl.utils.ColorUtils.getUnusedColor(currentColors);
 
     if (!transparentColor) {
-      console.error('Unable to find unused color to use as transparent color in the current sprite');
+      console.error(I18n.translate('Unable to find unused color to use as transparent color in the current sprite'));
       transparentColor = MAGIC_PINK;
     }
 
@@ -174,7 +177,7 @@
         link : imageUrl,
         shortLink : this.shorten_(imageUrl, URL_MAX_LENGTH, '...')
       });
-      this.uploadStatusContainerEl.innerHTML = 'Your image is now available at : ' + linkHtml;
+      this.uploadStatusContainerEl.innerHTML = I18n.translate('Your image is now available at : ') + linkHtml;
     } else {
       // FIXME : Should display error message instead
     }

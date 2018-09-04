@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.controller.dialogs');
 
@@ -95,7 +98,7 @@
 
     var config = dialogs[dialogId];
     if (!config) {
-      console.error('Could not find dialog configuration for dialogId : ' + dialogId);
+      console.error(I18n.translate('Could not find dialog configuration for dialogId : ') + dialogId);
       return;
     }
 

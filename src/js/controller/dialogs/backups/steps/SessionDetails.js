@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.controller.dialogs.backups.steps');
 
@@ -44,7 +47,7 @@
     if (snapshots.length === 0) {
       // This should normally never happen, all sessions have at least one snapshot and snapshots
       // can not be individually deleted.
-      console.warn('Could not retrieve snapshots for a session');
+      console.warn(I18n.translate('Could not retrieve snapshots for a session'));
       return pskl.utils.Template.get('snapshot-list-empty');
     }
 

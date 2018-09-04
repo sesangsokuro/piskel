@@ -2,6 +2,7 @@
  * @provide pskl.tools.drawing.selection.ShapeSelect
  *
  * @require pskl.utils
+ * @require I18n
  */
 (function() {
   var ns = $.namespace('pskl.tools.drawing.selection');
@@ -10,7 +11,7 @@
     ns.BaseSelect.call(this);
 
     this.toolId = 'tool-shape-select';
-    this.helpText = 'Shape selection';
+    this.helpText = I18n.translate('Shape selection');
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.SHAPE_SELECT;
   };
 

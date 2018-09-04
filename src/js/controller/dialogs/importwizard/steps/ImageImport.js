@@ -166,7 +166,7 @@
     } else if (this.sheetImportType.checked) {
       return this.sheetImportType.value;
     } else {
-      throw 'Could not find the currently selected import type';
+      throw I18n.translate('Could not find the currently selected import type');
     }
   };
 

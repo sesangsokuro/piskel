@@ -2,6 +2,7 @@
  * @provide pskl.tools.drawing.DitheringTool
  *
  * @require pskl.utils
+ * @require I18n
  */
 (function() {
   var ns = $.namespace('pskl.tools.drawing');
@@ -9,7 +10,7 @@
   ns.DitheringTool = function() {
     ns.SimplePen.call(this);
     this.toolId = 'tool-dithering';
-    this.helpText = 'Dithering tool';
+    this.helpText = I18n.translate('Dithering tool');
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.DITHERING;
   };
 

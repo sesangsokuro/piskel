@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.controller');
 
@@ -48,10 +51,10 @@
     // and we were not displaying a warning before.
     if (shouldDisplayWarning && !isWarningDisplayed) {
       $.publish(Events.SHOW_NOTIFICATION, [{
-        'content': 'Performance problem detected, ' +
+        'content': I18n.translate('Performance problem detected, ') +
                    '<a href="#" style="color:red;"' +
                        'onclick="pskl.controller.UserWarningController.showPerformanceInfoDialog()">' +
-                      'learn more?</a>',
+                        I18n.translate('learn more?') + '</a>',
         'hideDelay' : 5000
       }]);
     }

@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.controller.dialogs.importwizard');
 
@@ -66,7 +69,7 @@
         }.bind(this)
       );
     } else {
-      console.error('Unsupported import. Only single piskel or single image are supported at the moment.');
+      console.error(I18n.translate('Unsupported import. Only single piskel or single image are supported at the moment.'));
       this.closeDialog();
     }
   };

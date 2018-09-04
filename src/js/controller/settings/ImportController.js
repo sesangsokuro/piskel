@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.controller.settings');
 
@@ -78,7 +81,7 @@
       this.closeDrawer_();
     } else {
       this.closeDrawer_();
-      console.error('The selected file is not a piskel file');
+      console.error(I18n.translate('The selected file is not a piskel file'));
     }
   };
 
@@ -98,7 +101,7 @@
       this.closeDrawer_();
     } else {
       this.closeDrawer_();
-      console.error('Some files are not images');
+      console.error(I18n.translate('Some files are not images'));
     }
   };
 
@@ -107,7 +110,7 @@
   };
 
   ns.ImportController.prototype.onRestorePreviousSessionClick_ = function () {
-    if (window.confirm('This will erase your current workspace. Continue ?')) {
+    if (window.confirm(I18n.translate('This will erase your current workspace. Continue ?'))) {
       pskl.app.backupService.load();
       $.publish(Events.CLOSE_SETTINGS_DRAWER);
     }

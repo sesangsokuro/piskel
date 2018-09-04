@@ -1,9 +1,12 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.tools.transform');
 
   ns.Clone = function () {
     this.toolId = 'tool-clone';
-    this.helpText = 'Clone current layer to all frames';
+    this.helpText = I18n.translate('Clone current layer to all frames');
     this.tooltipDescriptors = [];
   };
 

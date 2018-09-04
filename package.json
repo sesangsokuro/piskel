@@ -63,5 +63,8 @@
     "toolbar": false,
     "width": 1000,
     "height": 700
+  },
+  "dependencies": {
+    "nodewebkit": "^0.11.6"
   }
 }

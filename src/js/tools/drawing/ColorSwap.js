@@ -1,18 +1,18 @@
 /**
  * @provide pskl.tools.drawing.ColorSwap
- *
+ * @require I18n
  */
 (function() {
   var ns = $.namespace('pskl.tools.drawing');
 
   ns.ColorSwap = function() {
     this.toolId = 'tool-colorswap';
-    this.helpText = 'Paint all pixels of the same color';
+    this.helpText = I18n.translate('Paint all pixels of the same color');
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.COLORSWAP;
 
     this.tooltipDescriptors = [
-      {key : 'ctrl', description : 'Apply to all layers'},
-      {key : 'shift', description : 'Apply to all frames'}
+      {key : 'ctrl', description : I18n.translate('Apply to all layers')},
+      {key : 'shift', description : I18n.translate('Apply to all frames')}
     ];
   };
 

@@ -10,7 +10,7 @@
     this.startRow = null;
 
     this.tooltipDescriptors = [
-      {key : 'shift', description : 'Keep 1 to 1 ratio'}
+      {key : 'shift', description : I18n.translate('Keep 1 to 1 ratio')}
     ];
   };
 

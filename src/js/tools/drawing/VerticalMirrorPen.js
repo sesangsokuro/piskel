@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function() {
   var ns = $.namespace('pskl.tools.drawing');
 
@@ -5,12 +8,12 @@
     this.superclass.constructor.call(this);
 
     this.toolId = 'tool-vertical-mirror-pen';
-    this.helpText = 'Vertical Mirror pen';
+    this.helpText = I18n.translate('Vertical Mirror pen');
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.MIRROR_PEN;
 
     this.tooltipDescriptors = [
-      {key : 'ctrl', description : 'Use horizontal axis'},
-      {key : 'shift', description : 'Use horizontal and vertical axis'}
+      {key : 'ctrl', description : I18n.translate('Use horizontal axis')},
+      {key : 'shift', description : I18n.translate('Use horizontal and vertical axis')}
     ];
   };
 

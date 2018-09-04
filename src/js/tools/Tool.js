@@ -1,9 +1,12 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.tools');
 
   ns.Tool = function () {
     this.toolId = 'tool';
-    this.helpText = 'Abstract tool';
+    this.helpText = I18n.translate('Abstract tool');
     this.tooltipDescriptors = [];
   };
 

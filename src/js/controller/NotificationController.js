@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.controller');
 
@@ -21,7 +24,7 @@
     message.id = 'user-message';
     message.className = 'user-message';
     message.innerHTML = messageInfo.content;
-    message.innerHTML = message.innerHTML + '<div title="Close message" class="close">x</div>';
+    message.innerHTML = message.innerHTML + '<div title="' + I18n.translate('Close message') + '" class="close">x</div>';
     document.body.appendChild(message);
 
     message.querySelector('.close').addEventListener('click', this.removeMessage_.bind(this));

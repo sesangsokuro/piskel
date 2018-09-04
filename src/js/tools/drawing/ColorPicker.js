@@ -2,13 +2,14 @@
  * @provide pskl.tools.drawing.ColorPicker
  *
  * @require pskl.utils
+ * @require I18n
  */
 (function() {
   var ns = $.namespace('pskl.tools.drawing');
 
   ns.ColorPicker = function() {
     this.toolId = 'tool-colorpicker';
-    this.helpText = 'Color picker';
+    this.helpText = I18n.translate('Color picker');
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.COLORPICKER;
   };
 

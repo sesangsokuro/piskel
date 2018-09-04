@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.controller.dialogs.importwizard.steps');
 
@@ -70,14 +73,14 @@
     if (isBigger && keep) {
       anchorInfo.innerHTML = [
         '<div class="import-resize-warning">',
-        '  Imported content will be cropped!',
+        '  '+I18n.translate('Imported content will be cropped!'),
         '</div>',
-        'Select crop anchor:'
+        I18n.translate('Select crop anchor:')
       ].join('');
     } else if (isBigger) {
-      anchorInfo.innerHTML = 'Select resize anchor:';
+      anchorInfo.innerHTML = I18n.translate('Select resize anchor:');
     } else {
-      anchorInfo.innerHTML = 'Select position anchor:';
+      anchorInfo.innerHTML = I18n.translate('Select position anchor:');
     }
   };
 
