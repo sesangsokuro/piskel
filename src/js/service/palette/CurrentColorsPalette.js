@@ -1,8 +1,11 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.service.palette');
 
   ns.CurrentColorsPalette = function () {
-    this.name = 'Current colors';
+    this.name = I18n.translate('Current colors');
     this.id = Constants.CURRENT_COLORS_PALETTE_ID;
     this.colorSorter = new pskl.service.color.ColorSorter();
   };

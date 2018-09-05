@@ -1,5 +1,6 @@
 <div class="toolbox-container layers-list-container">
-  <h3 class="toolbox-title layers-title">Layers
+  <h3 class="toolbox-title layers-title">
+    <span id="h3-layers">Layers</span>
     <div rel="tooltip"
          data-placement="left"
          class="layers-toggle-preview piskel-icon-eye"></div>
@@ -42,5 +43,14 @@
           {{opacity}}&#945;
         </span>
     </li>
+  </script>
+
+  <script>
+    document.getElementById('h3-layers').innerText = I18n.translate('Layers');
+    document.getElementsByClassName('button layers-button piskel-icon-arrow-up-fat')[0].title = I18n.translate('Move layer up');
+    document.getElementsByClassName('button layers-button piskel-icon-arrow-down-fat')[0].title = I18n.translate('Move layer down');
+    document.getElementsByClassName('button layers-button piskel-icon-pencil')[0].title = I18n.translate('Edit layer name');
+    document.getElementsByClassName('button layers-button piskel-icon-merge')[0].title = I18n.translate('Merge with layer below');
+    document.getElementsByClassName('button layers-button piskel-icon-close')[0].title = I18n.translate('Delete selected layer');
   </script>
 </div>

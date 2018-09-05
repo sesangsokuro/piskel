@@ -95,4 +95,8 @@
     loadStyle('css/piskel-style-packaged' + version + '.css');
     loadScript(script, '_onPiskelReady()');
   }
+
+  //
+  document.body
+
 })();

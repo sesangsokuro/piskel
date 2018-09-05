@@ -216,6 +216,7 @@ module.exports = function(grunt) {
           {src: ['dest/tmp/index.html'], dest: 'dest/prod/index.html'},
           {src: ['src/logo.png'], dest: 'dest/prod/logo.png'},
           {src: ['src/js/lib/gif/gif.ie.worker.js'], dest: 'dest/prod/js/lib/gif/gif.ie.worker.js'},
+          {src: ['src/js/I18n.js'], dest: 'dest/prod/js/I18n.js'},
           {expand: true, src: ['img/**'], cwd: 'src/', dest: 'dest/prod/', filter: 'isFile'},
           {expand: true, src: ['css/fonts/**'], cwd: 'src/', dest: 'dest/prod/', filter: 'isFile'}
         ]

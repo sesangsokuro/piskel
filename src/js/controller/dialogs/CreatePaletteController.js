@@ -36,20 +36,20 @@
     var isCurrentColorsPalette = paletteId == Constants.CURRENT_COLORS_PALETTE_ID;
     if (paletteId && !isCurrentColorsPalette) {
       importFileButton.style.display = 'none';
-      this.setTitle('Edit Palette');
+      this.setTitle(I18n.translate('Edit Palette'));
 
       var paletteObject = this.paletteService.getPaletteById(paletteId);
       palette = pskl.model.Palette.fromObject(paletteObject);
     } else {
       downloadButton.style.display = 'none';
       deleteButton.style.display = 'none';
-      this.setTitle('Create Palette');
+      this.setTitle(I18n.translate('Create Palette'));
 
       var uuid = pskl.utils.Uuid.generate();
       if (isCurrentColorsPalette) {
-        palette = new pskl.model.Palette(uuid, 'Current colors clone', this.getCurrentColors_());
+        palette = new pskl.model.Palette(uuid, I18n.translate('Current colors clone'), this.getCurrentColors_());
       } else {
-        palette = new pskl.model.Palette(uuid, 'New palette', []);
+        palette = new pskl.model.Palette(uuid, I18n.translate('New palette'), []);
       }
     }
 

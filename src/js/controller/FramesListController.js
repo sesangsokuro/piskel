@@ -273,7 +273,7 @@
     cloneFrameButton.setAttribute('data-placement', 'right');
     cloneFrameButton.setAttribute('data-tile-number', tileNumber);
     cloneFrameButton.setAttribute('data-tile-action', ACTION.CLONE);
-    cloneFrameButton.setAttribute('title', 'Duplicate this frame');
+    cloneFrameButton.setAttribute('title', I18n.translate('Duplicate this frame'));
     cloneFrameButton.className = 'tile-overlay duplicate-frame-action icon-frame-duplicate-white';
     previewTileRoot.appendChild(cloneFrameButton);
 
@@ -281,7 +281,7 @@
     var deleteButton = document.createElement('button');
     deleteButton.setAttribute('rel', 'tooltip');
     deleteButton.setAttribute('data-placement', 'right');
-    deleteButton.setAttribute('title', 'Delete this frame');
+    deleteButton.setAttribute('title', I18n.translate('Delete this frame'));
     deleteButton.setAttribute('data-tile-number', tileNumber);
     deleteButton.setAttribute('data-tile-action', ACTION.DELETE);
     deleteButton.className = 'tile-overlay delete-frame-action icon-frame-recyclebin-white';
