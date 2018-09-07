@@ -1,21 +1,21 @@
 <script type="text/html" id="templates/settings/export/zip.html">
   <div class="export-panel-zip">
-    <div class="export-panel-header export-info">ZIP archive containing one PNG for each frame. File names will start with the prefix below.</div>
+    <div class="export-panel-header export-info">@@ZIP_archive_containing_one_PNG_for_each_frame._File_names_will_start_with_the_prefix_below.</div>
     <div class="export-panel-section">
       <div style="display: flex; line-height: 23px;">
-        <label style="flex-shrink: 0; padding-right:5px;">Prefix</label>
+        <label style="flex-shrink: 0; padding-right:5px;">@@Prefix</label>
         <input type="text" style="flex: 1;" class="zip-prefix-name textfield"
-               autocomplete="off" placeholder="PNG file prefix ...">
+               autocomplete="off" placeholder="@@PNG_file_prefix_...">
       </div>
       <div class="checkbox-container" style="margin: 5px 0;">
         <input id="zip-split-layers" class="zip-split-layers-checkbox checkbox-fix" type="checkbox" />
-        <label for="zip-split-layers">Split by layers</label>
+        <label for="zip-split-layers">@@Split_by_layers</label>
       </div>
       <div class="checkbox-container use-layer-names-container" style="margin: 5px 0;">
         <input id="zip-use-layer-names" class="zip-use-layer-names-checkbox checkbox-fix" type="checkbox" />
-        <label for="zip-use-layer-names">Index by layer names</label>
+        <label for="zip-use-layer-names">@@Index_by_layer_names</label>
       </div>
-      <button type="button" class="button button-primary zip-generate-button"/>Download ZIP</button>
+      <button type="button" class="button button-primary zip-generate-button"/>@@Download_ZIP</button>
     </div>
   </div>
 </script>

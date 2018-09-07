@@ -1,19 +1,19 @@
 <script type="text/template" id="templates/settings/save.html">
   <div class="settings-section settings-section-save">
     <form action="" method="POST" class="save-form" name="save-form">
-      <div class="settings-title">Sprite Information</div>
+      <div class="settings-title">@@Sprite_Information</div>
       <div class="settings-item">
         <div class="settings-form-section" style="overflow:hidden">
-          <label class="row" style="line-height:20px;">Title : </label>
+          <label class="row" style="line-height:20px;">@@Title_: </label>
           <input id="save-name" type="text" class="save-field textfield" autocomplete="off" />
         </div>
         <div class="settings-form-section">
-          <label class="row" style="line-height:20px;">Description : </label>
+          <label class="row" style="line-height:20px;">@@Description_: </label>
           <textarea id="save-description" class="save-field textfield"></textarea>
         </div>
         <div class="settings-form-section  save-public-section">
           <label class="row">
-            Public : <input type="checkbox" value="1" name="save-public-checkbox"/>
+            @@Public : <input type="checkbox" value="1" name="save-public-checkbox"/>
           </label>
         </div>
       </div>
@@ -23,21 +23,21 @@
 
 <!-- save-gallery-partial -->
 <script type="text/template" id="save-gallery-partial">
-  <div class="settings-title">Save online</div>
+  <div class="settings-title">@@Save_online</div>
   <div class="settings-item">
-    <input type="button" class="button button-primary" id="save-gallery-button" value="Save to your gallery" />
-    <div class="save-status save-online-status">Your piskel will be stored online in your gallery.</div>
+    <input type="button" class="button button-primary" id="save-gallery-button" value="@@Save_to_your_gallery" />
+    <div class="save-status save-online-status">@@Your_piskel_will_be_stored_online_in_your_gallery.</div>
   </div>
 </script>
 
 <script type="text/template" id="save-gallery-warning-partial">
   <div class="save-status-warning-icon icon-common-warning-red">&nbsp;</div>
-  <div class="save-status-warning-text">Saving to the gallery might fail due to the sprite size.</div>
+  <div class="save-status-warning-text">@@Saving_to_the_gallery_might_fail_due_to_the_sprite_size.</div>
 </script>
 
 <!-- save-gallery-unavailable-partial -->
 <script type="text/template" id="save-gallery-unavailable-partial">
-  <div class="settings-title">Save online</div>
+  <div class="settings-title">@@Save_online</div>
   <div class="settings-item">
     <div class="save-status">Login to <a href="https://www.piskelapp.com" target="_blank">piskelapp.com</a> to save and share your sprites online.</div>
   </div>
@@ -45,28 +45,28 @@
 
 <!-- save-localstorage-partial -->
 <script type="text/template" id="save-localstorage-partial">
-  <div class="settings-title">Save offline in Browser</div>
+  <div class="settings-title">@@Save_offline_in_Browser</div>
   <div class="settings-item">
-    <input type="button" class="button button-primary" id="save-localstorage-button" value="Save in Browser" />
-    <div class="save-status">Your piskel will be saved locally and will only be accessible from this browser.</div>
+    <input type="button" class="button button-primary" id="save-localstorage-button" value="@@Save_in_Browser" />
+    <div class="save-status">@@Your_piskel_will_be_saved_locally_and_will_only_be_accessible_from_this_browser.</div>
   </div>
 </script>
 
 <!-- save-desktop-partial -->
 <script type="text/template" id="save-desktop-partial">
-  <div class="settings-title">Save as File</div>
+  <div class="settings-title">@@Save_as_File</div>
   <div class="settings-item">
-    <input type="button" class="button button-primary" id="save-desktop-button" value="Save" />
-    <input type="button" class="button button-primary" id="save-desktop-as-new-button" value="Save as ..." />
-    <div class="save-status">Your sprite will be saved as a .piskel file.</div>
+    <input type="button" class="button button-primary" id="save-desktop-button" value="@@SaveBTN" />
+    <input type="button" class="button button-primary" id="save-desktop-as-new-button" value="@@Save_as_..." />
+    <div class="save-status">@@Your_sprite_will_be_saved_as_a_.piskel_file.</div>
   </div>
 </script>
 
 <!-- save-file-download-partial -->
 <script type="text/template" id="save-file-download-partial">
-  <div class="settings-title">Save offline as File</div>
+  <div class="settings-title">@@Save_offline_as_File</div>
   <div class="settings-item">
-    <input type="button" class="button button-primary" id="save-file-download-button" value="Save as .piskel" />
-    <div class="save-status">Your sprite will be downloaded as a .piskel file.</div>
+    <input type="button" class="button button-primary" id="save-file-download-button" value="@@Save_as_.piskel" />
+    <div class="save-status">@@Your_sprite_will_be_downloaded_as_a_.piskel_file.</div>
   </div>
 </script>

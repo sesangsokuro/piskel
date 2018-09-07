@@ -1,4 +1,4 @@
-  var I18n = {
+module.exports = {
     en: {},
     ko: {
       'Add new frame': '새 프레임 추가',
@@ -168,10 +168,10 @@
       'Save_offline_in_Browser': '브라우저에 오프라인으로 저장',
       'Your_piskel_will_be_saved_locally_and_will_only_be_accessible_from_this_browser.': '프로젝트는 로컬에 저장되며이 브라우저에서만 액세스 할 수 있습니다.',
       'Save_as_File': '파일로 저장',
+      'Save_as_.piskel': '.piskel로 저장',
       'Save': '저장',
       'Save_as_...': '다른 이름으로 저장',
       'Save_offline_as_File': '파일을 오프라인으로 저장',
-      'Save_as_.piskel': '.piskel로 저장',
       'Your_sprite_will_be_downloaded_as_a_.piskel_file.': '스프라이트가 .piskel 파일로 다운로드됩니다.',
       'Disabled_in_tile_mode': '타일 ​​모드에서 사용 중지',
       'Building_animated_GIF_...': '애니메이션 GIF 생성중...',
