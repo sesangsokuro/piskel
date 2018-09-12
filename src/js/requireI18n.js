@@ -260,12 +260,16 @@ module.exports = {
       'Backups_may_be_erased_without_notice': '백업은 예고없이 지워질 수 있으므로 최대한 빨리 파일이나 갤러리에 저장하십시오.',
       'No_session_found_...': '세션을 찾을 수 없습니다...',
       'Could_not_load_backup_sessions,_something_went_wrong.': '백업세션을 로드 할 수 없습니다. 문제가 발생했습니다.',
-      'View': '뷰',
+      'View': '보기',
       'back': '뒤로',
       'No_snapshot_found_...': '스냅샷을 찾을 수 없습니다...',
       'Could_not_load_snapshots,_something_went_wrong.': '스냅샷을 로드 할 수 없습니다. 문제가 발생했습니다.',
       'Load': '불러오기',
       'Session_recorded': '세션 기록 : ',
+
+      'Load_a_local_piskel_saved_in_this_Browser': '이 브라우저에 저장된 <span class="import-highlight">로컬 piskel</span>을 불러오기',
+      'Load_a_.piskel_file_from_your_computer' : '컴퓨터에서 <span class="import-highlight">.piskel</span>파일 불러오기',
+      'Supports_PNG,_JPG,_BMP,_Animated_GIF' : '<span class="import-highlight">PNG, JPG, BMP, 움직이는 GIF파일</span>을 지원합니다.',
 
       '____': '____',
     },

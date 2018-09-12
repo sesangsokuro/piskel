@@ -293,7 +293,6 @@ module.exports = function(grunt) {
             'Browse_Local_Piskels': I18n.translate('Browse_Local_Piskels'),
             'Date': I18n.translate('Date'),
             'Actions': I18n.translate('Actions'),
-            'Browse_backups': I18n.translate('Browse_backups'),
             'If_you_forgot_to_save_your_work_or_if_Piskel_crashed': I18n.translate('If_you_forgot_to_save_your_work_or_if_Piskel_crashed'),
             'Backups_may_be_erased_without_notice': I18n.translate('Backups_may_be_erased_without_notice'),
             'No_session_found_...': I18n.translate('No_session_found_...'),
@@ -303,10 +302,11 @@ module.exports = function(grunt) {
             'back': I18n.translate('back'),
             'No_snapshot_found_...': I18n.translate('No_snapshot_found_...'),
             'Could_not_load_snapshots,_something_went_wrong.': I18n.translate('Could_not_load_snapshots,_something_went_wrong.'),
+            'Load_a_local_piskel_saved_in_this_Browser':I18n.translate('Load_a_local_piskel_saved_in_this_Browser'),
+            'Load_a_.piskel_file_from_your_computer' : I18n.translate('Load_a_.piskel_file_from_your_computer'),
             'Load': I18n.translate('Load'),
             'Session_recorded': I18n.translate('Session_recorded'),
-
-            '__':I18n.translate('__'),
+            'Supports_PNG,_JPG,_BMP,_Animated_GIF' : I18n.translate('Supports_PNG,_JPG,_BMP,_Animated_GIF'),
 
             'version' : version,
             'releaseVersion' : releaseVersion
