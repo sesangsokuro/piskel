@@ -1,7 +1,7 @@
 <script type="text/template" id="templates/dialogs/browse-backups.html">
   <div class="dialog-wrapper">
     <h3 class="dialog-head">
-      Browse backups
+      @@Browse_backups
       <span class="dialog-close">X</span>
     </h3>
     <div class="dialog-content backups-wizard-container"></div>
@@ -15,10 +15,10 @@
       <div class="backups-icon icon-common-backup-white">&nbsp;</div>
       <div class="browse-backups-disclaimer-content">
         <!-- Keep in sync with MAX_SESSIONS in BackupService.js -->
-        If you forgot to save your work or if Piskel crashed, try to restore one of the automatically backed up sessions below (up to 10 sessions).
+        @@If_you_forgot_to_save_your_work_or_if_Piskel_crashed<!--,_try_to_restore_one_of_the_automatically_backed_up_sessions_below_(up_to_10_sessions).-->
         <br/>
         <br/>
-        Backups may be erased without notice, so try to save your work to a file or to your gallery as soon as you can.
+        @@Backups_may_be_erased_without_notice<!--,_so_try_to_save_your_work_to_a_file_or_to_your_gallery_as_soon_as_you_can.-->
       </div>
     </div>
     <div class="session-list">
@@ -28,23 +28,23 @@
 </script>
 
 <script type="text/template" id="session-list-empty">
-<div class="centered-message session-list-empty">No session found ...</div>
+<div class="centered-message session-list-empty">@@No_session_found_...</div>
 </script>
 
 <script type="text/template" id="session-list-error">
-<div class="centered-message session-list-error">Could not load backup sessions, something went wrong.</div>
+<div class="centered-message session-list-error">@@Could_not_load_backup_sessions,_something_went_wrong.</div>
 </script>
 
 <script type="text/template" id="session-list-item">
 <div class="session-item">
   <div class="session-details">
     <span class="session-details-title">{{name}} {{description}}</span>
-    <span class="session-details-info">Session recorded {{date}}</span>
+    <span class="session-details-info">@@Session_recorded {{date}}</span>
     <span class="session-details-info">{{count}} saved</span>
   </div>
   <div class="session-actions">
-    <button class="button" data-session-id="{{id}}" data-action="delete">Delete</button>
-    <button class="button button-primary" data-session-id="{{id}}" data-action="view">View</button>
+    <button class="button" data-session-id="{{id}}" data-action="delete">@@Delete</button>
+    <button class="button button-primary" data-session-id="{{id}}" data-action="view">@@View</button>
   </div>
 </div>
 </script>
@@ -55,17 +55,17 @@
     <div class="snapshot-list"></div>
   </div>
   <div class="backups-step-actions">
-    <button class="button back-button">back</button>
+    <button class="button back-button">@@back</button>
   </div>
 </div>
 </script>
 
 <script type="text/template" id="snapshot-list-empty">
-<div class="centered-message snapshot-list-empty">No snapshot found ...</div>
+<div class="centered-message snapshot-list-empty">@@No_snapshot_found_...</div>
 </script>
 
 <script type="text/template" id="snapshot-list-error">
-<div class="centered-message snapshot-list-error">Could not load snapshots, something went wrong.</div>
+<div class="centered-message snapshot-list-error">@@Could_not_load_snapshots,_something_went_wrong.</div>
 </script>
 
 <script type="text/template" id="snapshot-list-item">
@@ -77,7 +77,7 @@
     <span class="snapshot-details-info">{{frames}}, size {{resolution}}, {{fps}}fps</span>
   </div>
   <div class="snapshot-actions">
-    <button class="button button-primary" data-action="load" data-snapshot-id="{{id}}">Load</button>
+    <button class="button button-primary" data-action="load" data-snapshot-id="{{id}}">@@Load</button>
   </div>
 </div>
 </script>

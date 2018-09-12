@@ -1,3 +1,6 @@
+/**
+ * @require I18n
+ */
 (function () {
   var ns = $.namespace('pskl.controller.settings.exportimage');
 
@@ -10,7 +13,7 @@
 
   ns.ZipExportController.prototype.init = function () {
     this.pngFilePrefixInput = document.querySelector('.zip-prefix-name');
-    this.pngFilePrefixInput.value = 'sprite_';
+    this.pngFilePrefixInput.value = I18n.translate('sprite_');
 
     this.splitByLayersCheckbox = document.querySelector('.zip-split-layers-checkbox');
     this.addEventListener(this.splitByLayersCheckbox, 'change', this.onSplitLayersClick_);
